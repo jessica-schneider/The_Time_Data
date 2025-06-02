@@ -1,25 +1,19 @@
 import './App.css'
-import { useQuery } from "convex/react";
-import { api } from "../convex/_generated/api";
+import Home from './app/components/Home.tsx'
+import Query from './app/components/Query.tsx'
+import { Routes, Route } from "react-router";
 
+ 
 function App() {
-	const time_clock_data = useQuery(api.time_clock_data.get);
-
 
 	return (
 		<>    
-			<h1 className="title">Time Clock Data</h1>
-			<div className="time-clock-container">
-				{time_clock_data?.map(({ name, datein, dateout }) => (
-					<div key={name} className="time-clock-card">
-						<h3 className="employee-name">{name}</h3>
-						<div className="time-details">
-							<p><span className="label">Date In:</span> {datein}</p>
-							<p><span className="label">Date Out:</span> {dateout}</p>
-						</div>
-					</div>
-				))} 
-			</div>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="query" element={<Query />} />
+				
+			</Routes>
+			
 		</>
 	);
   
