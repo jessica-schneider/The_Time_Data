@@ -13,7 +13,7 @@ import type {
   FilterApi,
   FunctionReference,
 } from "convex/server";
-import type * as time_clock_data from "../time_clock_data.js";
+import type * as person from "../person.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -24,7 +24,7 @@ import type * as time_clock_data from "../time_clock_data.js";
  * ```
  */
 declare const fullApi: ApiFromModules<{
-  time_clock_data: typeof time_clock_data;
+  person: typeof person;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,
