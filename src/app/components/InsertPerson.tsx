@@ -2,12 +2,11 @@ import { useState } from "react";
 import { useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
-export default function EnterPerson() {
+export default function InsertPerson() {
   const [name, setName] = useState("");
   const createPerson = useMutation(api.person.createPerson);
 
   const submitPerson = async () => {
-    console.log("submitting");
     await createPerson({ text: name });
     setName("");
   };
@@ -18,7 +17,7 @@ export default function EnterPerson() {
 
   return (
     <div className="card-body">
-      <h2 className="card-title">Enter A Person</h2>
+      <h2 className="card-title">Create A Person</h2>
       <div className="bg-primary grid grid-cols-2">
         <label className="input">
           <svg
@@ -39,6 +38,7 @@ export default function EnterPerson() {
           </svg>
           <input
             type="text"
+            value={name}
             className="grow"
             placeholder="Name"
             onChange={handleNameChange}

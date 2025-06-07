@@ -1,6 +1,5 @@
-import { useState } from "react";
 import EnterTimeCard from "./EnterTimeCard";
-import EnterPerson from "./EnterPerson";
+import InsertPerson from "./InsertPerson";
 
 function Enter() {
   return (
@@ -8,7 +7,7 @@ function Enter() {
       <div className="grid grid-rows-2 gap-4 ml-4 mt-4">
         <div className="">
           <div className="card bg-base-300 w-96 shadow-sm ">
-            <EnterPerson />
+            <InsertPerson />
           </div>
         </div>
         <div className="">
