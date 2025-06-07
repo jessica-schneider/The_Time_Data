@@ -1,7 +1,7 @@
-import EnterTimeCard from "./EnterTimeCard";
+import InsertTimeCard from "./InsertTimeCard";
 import InsertPerson from "./InsertPerson";
 
-function Enter() {
+function Insert() {
   return (
     <>
       <div className="grid grid-rows-2 gap-4 ml-4 mt-4">
@@ -12,7 +12,7 @@ function Enter() {
         </div>
         <div className="">
           <div className="card bg-base-300 w-96 shadow-sm ">
-            <EnterTimeCard />
+            <InsertTimeCard />
           </div>
         </div>
       </div>
@@ -20,4 +20,4 @@ function Enter() {
   );
 }
 
-export default Enter;
+export default Insert;

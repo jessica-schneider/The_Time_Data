@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function EnterTimeCard() {
+function InsertTimeCard() {
   const INDEX_TO_MONTHS = {
     0: "January",
     1: "February",
@@ -163,4 +163,4 @@ function EnterTimeCard() {
   );
 }
 
-export default EnterTimeCard;
+export default InsertTimeCard;
