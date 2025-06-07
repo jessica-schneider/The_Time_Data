@@ -66,7 +66,7 @@ function InsertTimeCard() {
   return (
     <>
       <div className="card-body">
-        <h2 className="card-title">Enter A Timecard</h2>
+        <h2 className="card-title">Insert A Timecard</h2>
         <div className="bg-primary grid grid-cols-2">
           <select
             defaultValue={lastMonth}
