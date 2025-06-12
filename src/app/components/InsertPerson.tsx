@@ -6,13 +6,13 @@ export default function InsertPerson() {
   const [name, setName] = useState("");
   const createPerson = useMutation(api.person.createPerson);
 
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+  };
+
   const submitPerson = async () => {
     await createPerson({ text: name });
     setName("");
-  };
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
   };
 
   return (
