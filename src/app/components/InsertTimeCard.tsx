@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "./Icon.tsx";
+import { PersonSearch } from "./PersonSearch";
 
 function InsertTimeCard() {
   const INDEX_TO_MONTHS = {
@@ -77,15 +78,7 @@ function InsertTimeCard() {
           </select>
         </div>
 
-        <label className="input">
-          <Icon icon="person" />
-          <input type="text" className="grow" placeholder="Person ID" />
-        </label>
-
-        <label className="input">
-          <Icon icon="pencil" />
-          <input type="text" className="grow" placeholder="Name" />
-        </label>
+        <PersonSearch />
 
         <label className="input">
           <Icon icon="hashtag" />
