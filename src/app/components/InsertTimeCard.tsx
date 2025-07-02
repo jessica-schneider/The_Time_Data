@@ -23,7 +23,7 @@ function InsertTimeCard() {
   const defaultTimeCard = {
     month: "January",
     year: 2025,
-    personId: 0,
+    personId: "0",
     name: "name",
     numberOfVisits: 1,
     file: "",
@@ -78,11 +78,21 @@ function InsertTimeCard() {
           </select>
         </div>
 
-        <PersonSearch />
+        <PersonSearch timeCard={timeCard} setTimeCard={setTimeCard} />
 
         <label className="input">
           <Icon icon="hashtag" />
-          <input type="text" className="grow" placeholder="Number of Visits" />
+          <input
+            type="text"
+            className="grow"
+            placeholder="Number of Visits"
+            onChange={(e) => {
+              setTimeCard({
+                ...timeCard,
+                numberOfVisits: Number(e.target.value),
+              });
+            }}
+          />
         </label>
 
         <input type="file" className="file-input" />
@@ -90,7 +100,7 @@ function InsertTimeCard() {
         <div className="card-actions justify-end">
           <button
             className="btn btn-primary"
-            onClick={() => console.log("submitting....")}
+            onClick={() => console.log("submitting....", timeCard)}
           >
             Submit
           </button>
